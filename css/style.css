@@ -1,3 +1,10 @@
 *{
     user-select: none;
 }
+
+#pink {
+    background-color: pink;
+}
+#yello{
+    background-color: yellow;
+}
