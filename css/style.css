@@ -4,7 +4,15 @@
 
 #pink {
     background-color: pink;
+    height: 404px;
+    width: 404px;
 }
 #yello{
     background-color: yellow;
+    height: 404px;
+    width: 404px;
+}
+
+#flexDiv{
+    display: flex;
 }
