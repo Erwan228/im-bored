@@ -5,13 +5,16 @@
   <p @click="trappedClick">HEY EVERY !! IT'S ME!!! EV3RY BUDDY 'S FAVORITE [[Number 1 Rated Salesman1997]] SPAMT SPAMTON G. SPAMTON!!</p>
   <salesPitch v-if="salesPitchShow" @click="showDealLMA0">
     <template v-slot:salesPitch1>
-      <p>DO YOU WANNA HEAR ABOUT THE [[0.99$ Deal]] YOU CAN MAKE WITH ME?<br>
-      BECAUSE I KNOW. EXCACTLY. WHAT YOU. WANT!!!!1!</p>
+      <p>DO YOU WANNA HEAR ABOUT THE [[0.99$ Deal]] YOU CAN MAKE WITH ME?</p>
     </template>
   </salesPitch>
-  <br>
-  <salesPitch v-if="showPitch2" @click="showTheProduct$$$$">
+  <salesPitch v-if="showPitch2" @click="showPitch3">
     <template v-slot:salesPitch2>
+  <p>BECAUSE I KNOW. EXCACTLY. WHAT YOU. WANT!!!!1!</p>
+    </template>
+  </salesPitch>
+  <salesPitch v-if="showPitch2" @click="showTheProduct$$$$">
+    <template v-slot:salesPitch3>
       <p>AND. THAT. IS ..</p>
     </template>
   </salesPitch>
@@ -26,6 +29,7 @@ export default {
     return {
       salesPitchShow: false,
       showPitch2: false,
+      showPitch3: false,
     }
   },
   components: {
@@ -34,9 +38,14 @@ export default {
   methods: {
     trappedClick(){
       this.salesPitchShow = true
+      console.log(this.salesPitchShow)
     },
     showDealLMA0(){
       this.showPitch2 = true
+      console.log(this.showPitch2)
+    },
+    showPitch3(){
+      this.showPitch3 = true
     }
   }
 
@@ -44,6 +53,9 @@ export default {
 </script>
 
 <style>
+*{
+  user-select: none;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
