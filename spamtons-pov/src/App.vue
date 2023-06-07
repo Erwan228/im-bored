@@ -8,12 +8,12 @@
       <p>DO YOU WANNA HEAR ABOUT THE [[0.99$ Deal]] YOU CAN MAKE WITH ME?</p>
     </template>
   </salesPitch>
-  <salesPitch v-if="showPitch2" @showNext2="showPitch3">
+  <salesPitch v-if="showPitch2" @showNext2="showPitcher3">
     <template v-slot:salesPitch2>
   <p>BECAUSE I KNOW. EXCACTLY. WHAT YOU. WANT!!!</p>
     </template>
   </salesPitch>
-  <salesPitch v-if="showPitch2" @showNext3="showTheProduct$$$$">
+  <salesPitch v-if="showPitch3" @showNext3="showTheProduct$$$$">
     <template v-slot:salesPitch3>
       <p>AND. THAT. IS ..</p>
     </template>
@@ -44,10 +44,16 @@ export default {
       this.showPitch2 = true
       console.log(this.showPitch2)
     },
-    showPitch3(){
+    showPitcher3(){
       this.showPitch3 = true
       console.log(this.showPitch3)
+    },
+    showTheProduct$$$$(){
+      this.showPitch2 = false
+      this.showPitch3 = false
+      this.salesPitchShow = false
     }
+
   }
 
 }
