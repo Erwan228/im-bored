@@ -1,7 +1,13 @@
 <template>
+    <div @click="showNext1">
     <slot name="salesPitch1" @click="showNext1"></slot>
+    </div>
+    <div @click="showNext2">
     <slot name="salesPitch2" @click="showNext2"></slot>
+    </div>
+    <div @click="showNext3">
     <slot name="salesPitch3" @click="showNext3"></slot>
+    </div>
 </template>
 
 <script>

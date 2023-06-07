@@ -3,17 +3,17 @@
     <div id="pink" class="eyes"></div><div id="yello" class="eyes"></div>
   </div>
   <p @click="trappedClick">HEY EVERY !! IT'S ME!!! EV3RY BUDDY 'S FAVORITE [[Number 1 Rated Salesman1997]] SPAMT SPAMTON G. SPAMTON!!</p>
-  <salesPitch v-if="salesPitchShow" @click="showDealLMA0">
+  <salesPitch v-if="salesPitchShow" @showNext1="showDealLMA0">
     <template v-slot:salesPitch1>
       <p>DO YOU WANNA HEAR ABOUT THE [[0.99$ Deal]] YOU CAN MAKE WITH ME?</p>
     </template>
   </salesPitch>
-  <salesPitch v-if="showPitch2" @click="showPitch3">
+  <salesPitch v-if="showPitch2" @showNext2="showPitch3">
     <template v-slot:salesPitch2>
-  <p>BECAUSE I KNOW. EXCACTLY. WHAT YOU. WANT!!!!1!</p>
+  <p>BECAUSE I KNOW. EXCACTLY. WHAT YOU. WANT!!!</p>
     </template>
   </salesPitch>
-  <salesPitch v-if="showPitch2" @click="showTheProduct$$$$">
+  <salesPitch v-if="showPitch2" @showNext3="showTheProduct$$$$">
     <template v-slot:salesPitch3>
       <p>AND. THAT. IS ..</p>
     </template>
@@ -46,6 +46,7 @@ export default {
     },
     showPitch3(){
       this.showPitch3 = true
+      console.log(this.showPitch3)
     }
   }
 
