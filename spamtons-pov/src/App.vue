@@ -18,9 +18,19 @@
       <p>AND. THAT. IS ..</p>
     </template>
   </salesPitch>
-  <Deal v-if="revealDeal1">
+  <Deal v-if="revealDeal1" @clickDeal1="closeDeal1">
     <template v-slot:dealPart1>
       <p><button disabled><span @clickDeal1="closeDeal1">Choices</span></button></p>
+    </template>
+  </Deal>
+  <Deal v-if="revealDeal2" @clickDeal2="continueDealer">
+    <template v-slot:dealPart2>
+      <p>YOU WANT IT. YOU WANT <button disabled>Choices</button> DON'T YOU.</p>
+    </template>
+  </Deal>
+  <Deal v-if="revealDeal3" @clickDeal3="continueDealer2">
+    <template v-slot:dealPart3>
+      <p>WELL HAVE I GOT A DEAL FOR YOU!!</p>
     </template>
   </Deal>
 </template>
@@ -38,6 +48,7 @@ export default {
       showPitch3: false,
       revealDeal1: false,
       revealDeal2: false,
+      revealDeal3: false,
     }
   },
   components: {
@@ -68,8 +79,11 @@ export default {
     closeDeal1(){
       this.revealDeal1 = false
       this.revealDeal2 = true
-      console.log('woohoo')
+      console.log('[[hahehahehhahehahhhhaah]]!!!')
 
+    },
+    continueDealer(){
+      this.revealDeal3 = true
     }
 
   }
