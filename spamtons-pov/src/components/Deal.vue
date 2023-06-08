@@ -8,6 +8,10 @@
     <div @click="click3">
     <slot name="dealPart3"></slot>
     </div>
+    <div @click="click4">
+    <slot name="dealPart4"></slot>
+    </div>
+    <slot name="dealPart5"></slot>
 </template>
 
 <script>

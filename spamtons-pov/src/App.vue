@@ -33,6 +33,17 @@
       <p>WELL HAVE I GOT A DEAL FOR YOU!!</p>
     </template>
   </Deal>
+  <Deal v-if="revealDeal4" @clickDeal4="continueDealer3">
+    <template v-slot:dealPart4>
+      <p>ALL YOU HAVE TO DO IS SHOW ME. YOUR [[HeartShapedObject]].</p>
+    </template>
+  </Deal>
+  <Deal v-if="revealDeal5">
+    <template v-slot:dealPart5>
+      <p>YOUVE GOT THE [[LIGHT.]] WHY DON'T YOU [[Show it off?]]</p>
+    </template>
+  </Deal>
+  <p> {{ content }}</p>
 </template>
 
 <script>
@@ -49,6 +60,9 @@ export default {
       revealDeal1: false,
       revealDeal2: false,
       revealDeal3: false,
+      revealDeal4: false,
+      revealDeal5: false,
+      content: '',
     }
   },
   components: {
@@ -84,8 +98,21 @@ export default {
     },
     continueDealer(){
       this.revealDeal3 = true
-    }
-
+    },
+    continueDealer2(){
+      this.revealDeal4 = true
+      setTimeout(() => {
+        this.revealDeal5 = true
+        this.hahaHehe()
+      }, 4000);
+      
+    },
+    hahaHehe(){
+    setTimeout(() => {
+      this.content += 'Hahahhahehahehhahehahhhhaah'
+      this.hahaHehe()
+    }, 1000);
+  }
   }
 
 }
