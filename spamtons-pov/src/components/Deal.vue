@@ -10,7 +10,7 @@ export default{
     methods: {
         click1() {
             this.$emit('clickDeal1')
-        }
+        },
     }
 }
 </script>
