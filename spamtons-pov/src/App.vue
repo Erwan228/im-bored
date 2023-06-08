@@ -61,6 +61,7 @@ export default {
       this.showPitch2 = false
       this.showPitch3 = false
       this.salesPitchShow = false
+      this.revealDeal1 = true
     }
 
   }
