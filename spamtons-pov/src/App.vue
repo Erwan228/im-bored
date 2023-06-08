@@ -2,7 +2,7 @@
   <div id="divflex">
     <div id="pink" class="eyes"></div><div id="yello" class="eyes"></div>
   </div>
-  <p @click="trappedClick">HEY EVERY !! IT'S ME!!! EV3RY BUDDY 'S FAVORITE [[Number 1 Rated Salesman1997]] SPAMT SPAMTON G. SPAMTON!!</p>
+  <p @click="trappedClick" v-if="showIntro">HEY EVERY !! IT'S ME!!! EV3RY BUDDY 'S FAVORITE [[Number 1 Rated Salesman1997]] SPAMT SPAMTON G. SPAMTON!!</p>
   <salesPitch v-if="salesPitchShow" @showNext1="showDealLMA0">
     <template v-slot:salesPitch1>
       <p>DO YOU WANNA HEAR ABOUT THE [[0.99$ Deal]] YOU CAN MAKE WITH ME?</p>
@@ -27,6 +27,7 @@ export default {
   name: 'App',
   data() {
     return {
+      showIntro: true,
       salesPitchShow: false,
       showPitch2: false,
       showPitch3: false,
@@ -49,6 +50,7 @@ export default {
       console.log(this.showPitch3)
     },
     showTheProduct$$$$(){
+      this.showIntro = false
       this.showPitch2 = false
       this.showPitch3 = false
       this.salesPitchShow = false
