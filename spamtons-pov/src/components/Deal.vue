@@ -1,5 +1,5 @@
 <template>
-    <div @click="click1">
+    <div id="blocked" @click="click1">
         <slot name="dealPart1"></slot>
     </div>
 </template>
@@ -14,3 +14,7 @@ export default{
     }
 }
 </script>
+
+<style>
+
+</style>
