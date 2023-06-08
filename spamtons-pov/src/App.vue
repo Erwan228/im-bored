@@ -18,9 +18,9 @@
       <p>AND. THAT. IS ..</p>
     </template>
   </salesPitch>
-  <Deal>
+  <Deal v-if="sh">
     <template v-slot: dealPart1>
-
+      <button disabled>Choices</button>
     </template>
   </Deal>
 </template>
@@ -36,6 +36,7 @@ export default {
       salesPitchShow: false,
       showPitch2: false,
       showPitch3: false,
+      revealDeal1: false,
     }
   },
   components: {
