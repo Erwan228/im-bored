@@ -18,11 +18,16 @@
       <p>AND. THAT. IS ..</p>
     </template>
   </salesPitch>
-  
+  <Deal>
+    <template v-slot: dealPart1>
+
+    </template>
+  </Deal>
 </template>
 
 <script>
 import salesPitch from './components/salesPitch.vue';
+import Deal from './components/deal.vue';
 export default {
   name: 'App',
   data() {
@@ -35,6 +40,7 @@ export default {
   },
   components: {
     salesPitch,
+    Deal,
   },
   methods: {
     trappedClick(){
