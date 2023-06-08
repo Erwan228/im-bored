@@ -18,7 +18,7 @@
       <p>AND. THAT. IS ..</p>
     </template>
   </salesPitch>
-  <Deal v-if="sh">
+  <Deal v-if="revealDeal1" @clickDeal1="closeDeal1">
     <template v-slot: dealPart1>
       <button disabled>Choices</button>
     </template>
@@ -37,6 +37,7 @@ export default {
       showPitch2: false,
       showPitch3: false,
       revealDeal1: false,
+      revealDeal2: false
     }
   },
   components: {
@@ -62,6 +63,10 @@ export default {
       this.showPitch3 = false
       this.salesPitchShow = false
       this.revealDeal1 = true
+    },
+    closeDeal1(){
+      this.revealDeal1 = false
+      this.revealDeal2 = true
     }
 
   }
