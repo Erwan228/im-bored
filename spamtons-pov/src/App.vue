@@ -43,7 +43,7 @@
       <p>YOUVE GOT THE [[LIGHT.]] WHY DON'T YOU [[Show it off?]]</p>
     </template>
   </Deal>
-  <p> {{ content }}</p>
+  <p id="haho"> {{ content }}</p>
 </template>
 
 <script>
@@ -144,4 +144,5 @@ export default {
 #yello{
   background-color: yellow;
 }
+
 </style>
